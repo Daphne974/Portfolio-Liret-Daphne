@@ -282,17 +282,19 @@ function setupProjectCarousel() {
     // Données des projets avec leurs captures d'écran
     const projetsData = {
         1: {
-            title: "Projet 1 - Windows Form",
-            description: "Application de gestion de fiche de frais développée en Windows Forms avec C#. Cette application permet aux utilisateurs de créer, modifier et gérer leurs fiches de frais de manière intuitive avec une interface desktop moderne.",
-            technologies: ["C#", "Windows Forms", ".NET Framework", "SQL Server"],
+            title: "Nomadix",
+            description: "Développement d’une application web dédiée au tourisme permettant aux utilisateurs d’explorer des destinations, consulter les avis existants et partager leurs propres expériences. <br/>L’application est conçue en PHP et s’appuie sur une base de données MySQL hébergée sur un serveur dédié. <br/>Elle intègre un système d’authentification complet ainsi que la possibilité de publier, consulter et gérer des critiques de lieux touristiques.",
+            technologies: ["PHP", "HTML", "MySql"],
             images: [
-                "images/projet1/capture1.jpg",
-                "images/projet1/capture2.jpg",
-                "images/projet1/capture3.jpg"
+                "images/Nomadix/nomadix1.png",
+                "images/Nomadix/nomadix2.png",
+                "images/Nomadix/nomadix3.png",
+                "images/Nomadix/nomadix4.png",
+                "images/Nomadix/nomadix5.png"
             ]
         },
         2: {
-            title: "Projet 2 - ASP.NET Core MVC",
+            title: "Stationnement",
             description: "Application web développée avec ASP.NET Core MVC utilisant le pattern Model-View-Controller. Cette application inclut une gestion complète des utilisateurs, une base de données relationnelle et une interface responsive.",
             technologies: ["ASP.NET Core", "C#", "MVC", "Entity Framework", "Bootstrap", "SQL Server"],
             images: [

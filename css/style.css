@@ -547,7 +547,7 @@ img {
 
 .container-competences {
     display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
 
@@ -556,11 +556,11 @@ img {
     max-height: 250px;
     border-radius: var(--border-radius);
     transition: var(--transition);
+    align-self: center;
 }
 
 .competences-img:hover {
     transform: scale(1.02);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .actions {
