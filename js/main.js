@@ -295,7 +295,18 @@ function setupProjectCarousel() {
         },
         2: {
             title: "Stationnement",
-            description: "Application web développée avec ASP.NET Core MVC utilisant le pattern Model-View-Controller. Cette application inclut une gestion complète des utilisateurs, une base de données relationnelle et une interface responsive.",
+            description: "<Nom de l’application> est une application mobile développée en Kotlin sous Android Studio, conçue pour fonctionner comme une borne de stationnement numérique. Elle permet à l’utilisateur d’enregistrer sa plaque d’immatriculation afin de générer automatiquement un QR code personnel utilisé pour identifier le véhicule. À la fin du stationnement, il suffit de scanner ce QR code pour afficher le montant à régler. Le paiement est simulé afin de reproduire le processus réel sans effectuer de transaction. L’application s’appuie sur une base de données locale SQLite pour gérer les informations de stationnement, les tarifs et les données utilisateur. Elle propose également la consultation des tarifs, un système multilingue incluant le français, l’anglais et l’espagnol, ainsi qu’un espace administrateur permettant de modifier les tarifs et de débloquer des stationnements.",
+            technologies: ["ASP.NET Core", "C#", "MVC", "Entity Framework", "Bootstrap", "SQL Server"],
+            images: [
+                "images/projet2/capture1.jpg",
+                "images/projet2/capture2.jpg",
+                "images/projet2/capture3.jpg",
+                "images/projet2/capture4.jpg"
+            ]
+        },
+        3: {
+            title: "Piou",
+            description: "<Nom de l’application> est une application mobile développée en Kotlin sous Android Studio, conçue pour fonctionner comme une borne de stationnement numérique. Elle permet à l’utilisateur d’enregistrer sa plaque d’immatriculation afin de générer automatiquement un QR code personnel utilisé pour identifier le véhicule. À la fin du stationnement, il suffit de scanner ce QR code pour afficher le montant à régler. Le paiement est simulé afin de reproduire le processus réel sans effectuer de transaction. L’application s’appuie sur une base de données locale SQLite pour gérer les informations de stationnement, les tarifs et les données utilisateur. Elle propose également la consultation des tarifs, un système multilingue incluant le français, l’anglais et l’espagnol, ainsi qu’un espace administrateur permettant de modifier les tarifs et de débloquer des stationnements.",
             technologies: ["ASP.NET Core", "C#", "MVC", "Entity Framework", "Bootstrap", "SQL Server"],
             images: [
                 "images/projet2/capture1.jpg",
@@ -334,8 +345,8 @@ function setupProjectCarousel() {
         if (!currentProject) return;
 
         // Remplir les informations du projet
-        modalTitle.textContent = currentProject.title;
-        modalDescription.textContent = currentProject.description;
+        modalTitle.innerHTML = currentProject.title;
+        modalDescription.innerHTML = currentProject.description;
 
         // Ajouter les technologies
         projectTechnologies.innerHTML = '';
