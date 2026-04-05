@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 from_name: name,
                 title: subject,
                 message: message,
-                to_email: 'daphneliret@gmail.com',
+                to_email: email,
                 reply_to: email
             };
             
