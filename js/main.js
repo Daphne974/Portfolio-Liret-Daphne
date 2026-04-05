@@ -1,7 +1,7 @@
 // Attendre que le DOM soit complètement chargé
 document.addEventListener('DOMContentLoaded', function() {
     // Initialisation d'EmailJS avec votre User ID
-    emailjs.init("Zgpx_nwwR2xOm-NJ6"); // Votre User ID EmailJS
+    emailjs.init("service_io6krq3"); // Votre User ID EmailJS
     
     // Initialisation des animations AOS
     AOS.init({
