@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
             
             // Envoyer l'email via EmailJS
-            emailjs.send('service_io6krq3', 'template_zntocjb', templateParams)
+            emailjs.send('service_io6krq3', 'template_qdf993l', templateParams)
                 .then(function(response) {
                     console.log('Email envoyé avec succès!', response.status, response.text);
                     
