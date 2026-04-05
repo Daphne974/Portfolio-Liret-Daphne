@@ -155,10 +155,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Paramètres pour EmailJS
             const templateParams = {
                 from_name: name,
-                from_email: email,
-                subject: subject,
+                title: subject,
                 message: message,
-                to_email: 'daphneliret@gmail.com'
+                to_email: 'daphneliret@gmail.com',
+                reply_to: email
             };
             
             // Envoyer l'email via EmailJS
