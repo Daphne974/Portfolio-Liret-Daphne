@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 from_email: email,
                 subject: subject,
                 message: message,
-                to_email: 'Daphné.Liret.sen@gmail.com'
+                to_email: 'daphneliret@gmail.com'
             };
             
             // Envoyer l'email via EmailJS
