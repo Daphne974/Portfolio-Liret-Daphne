@@ -215,6 +215,29 @@ img {
     margin-right: 0.5rem;
 }
 
+/*Partie veille - sources */
+
+.btn-download-sources {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    background: #aaa5ff;
+    color: var(--dark-text);
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: var(--transition);
+    transform: translateY(0);
+    box-shadow: var(--shadow);
+}
+
+.btn-download-sources:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-download-sources i {
+    margin-right: 0.5rem;
+}
+
 /* Animations d'arrière-plan pour l'accueil */
 .animated-bg {
     position: absolute;
@@ -1091,8 +1114,11 @@ img {
 }
 
 .impact-item {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     padding: 1.5rem;
+    height: 100%;
 }
 
 .impact-item i {
@@ -1110,6 +1136,10 @@ img {
 .impact-item p {
     color: var(--text-color);
     line-height: 1.6;
+}
+
+.impact-item .btn-download-sources {
+    margin-top: auto
 }
 
 /* Responsive pour la veille */
