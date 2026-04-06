@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 message: message,
                 email: email,
                 reply: email,
-                time: now()
+                time: new Date().toLocaleString('fr-FR')
             };
             
             // Envoyer l'email via EmailJS
