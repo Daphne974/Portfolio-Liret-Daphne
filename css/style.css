@@ -1013,6 +1013,12 @@ img {
     font-size: 1.1rem;
 }
 
+.veille-milestone h3 {
+    color: #7e78fc;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
 .veille-milestone p {
     color: var(--text-color);
     line-height: 1.6;
