@@ -1,8 +1,8 @@
 // Attendre que le DOM soit complètement chargé
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Initialisation d'EmailJS avec votre User ID
     emailjs.init("Zgpx_nwwR2xOm-NJ6"); // Votre User ID EmailJS
-    
+
     // Initialisation des animations AOS
     AOS.init({
         duration: 1000,
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Menu hamburger sur mobile
     if (navToggle) {
-        navToggle.addEventListener('click', function() {
+        navToggle.addEventListener('click', function () {
             navLinks.classList.toggle('active');
             // Animation des barres du hamburger
             const spans = this.querySelectorAll('span');
@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Navigation fluide
     navItems.forEach(item => {
-        item.addEventListener('click', function(e) {
+        item.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             // Fermer le menu mobile si ouvert
             if (navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Navigation fluide vers la section
             const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
-            
+
             if (targetSection) {
                 window.scrollTo({
                     top: targetSection.offsetTop - navbar.offsetHeight,
@@ -57,13 +57,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Changer le style de la navbar au scroll
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (window.scrollY > 100) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
-        
+
         // Mettre en surbrillance le lien actif
         highlightActiveNavLink();
     });
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute('id');
-            
+
             if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                 navItems.forEach(item => {
                     item.classList.remove('active');
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const subtitle = accueilContent.querySelector('h2');
         const text = accueilContent.querySelector('p');
         const btn = accueilContent.querySelector('.btn-download');
-        
+
         if (title) title.classList.add('fade-in');
         if (subtitle) {
             subtitle.style.opacity = '0';
@@ -130,28 +130,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // Gestion du formulaire de contact avec EmailJS
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             // Récupérer les données du formulaire
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const subject = document.getElementById('subject').value.trim();
             const message = document.getElementById('message').value.trim();
-            
+
             // Vérifier que tous les champs sont remplis
             if (!name || !email || !subject || !message) {
                 showNotification('Veuillez remplir tous les champs !', 'error');
                 return;
             }
-            
+
             // Animation du bouton
             const submitBtn = this.querySelector('.btn-submit');
             const originalText = submitBtn.textContent;
-            
+
             submitBtn.textContent = 'Envoi en cours...';
             submitBtn.disabled = true;
-            
+
             // Paramètres pour EmailJS
             const templateParams = {
                 name: name,
@@ -161,28 +161,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 reply: email,
                 time: new Date().toLocaleString('fr-FR')
             };
-            
+
             // Envoyer l'email via EmailJS
             emailjs.send('service_io6krq3', 'template_qdf993l', templateParams)
-                .then(function(response) {
+                .then(function (response) {
                     console.log('Email envoyé avec succès!', response.status, response.text);
-                    
+
                     // Réinitialiser le formulaire
                     contactForm.reset();
-                    
+
                     // Notification de succès
                     showNotification('Message envoyé avec succès ! Je vous répondrai bientôt.', 'success');
-                    
+
                     // Réinitialiser le bouton
                     submitBtn.textContent = originalText;
                     submitBtn.disabled = false;
-                    
-                }, function(error) {
+
+                }, function (error) {
                     console.error('Erreur lors de l\'envoi:', error);
-                    
+
                     // Notification d'erreur
                     showNotification('Erreur lors de l\'envoi. Veuillez réessayer.', 'error');
-                    
+
                     // Réinitialiser le bouton
                     submitBtn.textContent = originalText;
                     submitBtn.disabled = false;
@@ -195,14 +195,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const notification = document.createElement('div');
         notification.className = `notification ${type}`;
         notification.textContent = message;
-        
+
         document.body.appendChild(notification);
-        
+
         // Animer l'apparition
         setTimeout(() => {
             notification.classList.add('show');
         }, 10);
-        
+
         // Disparition après 5 secondes
         setTimeout(() => {
             notification.classList.remove('show');
@@ -217,22 +217,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fonction pour créer des particules d'arrière-plan
     function createParticles() {
         const sections = document.querySelectorAll('section');
-        
+
         sections.forEach(section => {
             const particles = document.createElement('div');
             particles.className = 'particles';
-            
+
             for (let i = 0; i < 15; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
-                
+
                 // Position aléatoire
                 const posX = Math.random() * 100;
                 const posY = Math.random() * 100;
                 const size = Math.random() * (10 - 2) + 2;
                 const delay = Math.random() * 5;
                 const duration = Math.random() * (15 - 5) + 5;
-                
+
                 particle.style.cssText = `
                     width: ${size}px;
                     height: ${size}px;
@@ -242,34 +242,34 @@ document.addEventListener('DOMContentLoaded', function() {
                     animation-delay: ${delay}s;
                     animation-duration: ${duration}s;
                 `;
-                
+
                 particles.appendChild(particle);
             }
-            
+
             section.appendChild(particles);
         });
     }
 
     // Animation au survol des cartes de projet
     const projetCards = document.querySelectorAll('.projet-card');
-    
+
     projetCards.forEach(card => {
-        card.addEventListener('mousemove', function(e) {
+        card.addEventListener('mousemove', function (e) {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left; // Position X relative à la carte
             const y = e.clientY - rect.top;  // Position Y relative à la carte
-            
+
             // Calculer l'angle de rotation basé sur la position du curseur
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
-            
+
             const angleX = (y - centerY) / 20;
             const angleY = (centerX - x) / 20;
-            
+
             card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) scale3d(1.05, 1.05, 1.05)`;
         });
-        
-        card.addEventListener('mouseleave', function() {
+
+        card.addEventListener('mouseleave', function () {
             card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
         });
     });
@@ -295,16 +295,13 @@ function setupProjectCarousel() {
             ]
         },
         2: {
-            title: "Stationnement",
-            description: "<Nom de l’application> est une application mobile développée en Kotlin sous Android Studio, conçue pour fonctionner comme une borne de stationnement numérique. Elle permet à l’utilisateur d’enregistrer sa plaque d’immatriculation afin de générer automatiquement un QR code personnel utilisé pour identifier le véhicule. À la fin du stationnement, il suffit de scanner ce QR code pour afficher le montant à régler. Le paiement est simulé afin de reproduire le processus réel sans effectuer de transaction. L’application s’appuie sur une base de données locale SQLite pour gérer les informations de stationnement, les tarifs et les données utilisateur. Elle propose également la consultation des tarifs, un système multilingue incluant le français, l’anglais et l’espagnol, ainsi qu’un espace administrateur permettant de modifier les tarifs et de débloquer des stationnements.",
-            technologies: ["ASP.NET Core", "C#", "MVC", "Entity Framework", "Bootstrap", "SQL Server"],
+            title: "Gar'aou !?",
+            description: "Gar'aou !? est une application mobile développée en Kotlin sous Android Studio, conçue pour fonctionner comme une borne de stationnement numérique. Elle permet à l’utilisateur d’enregistrer sa plaque d’immatriculation afin de générer automatiquement un QR code personnel utilisé pour identifier le véhicule. À la fin du stationnement, il suffit de scanner ce QR code pour afficher le montant à régler. Le paiement est simulé afin de reproduire le processus réel sans effectuer de transaction. L’application s’appuie sur une base de données locale SQLite pour gérer les informations de stationnement, les tarifs et les données utilisateur. Elle propose également la consultation des tarifs, un système multilingue incluant le français, l’anglais et l’espagnol, ainsi qu’un espace administrateur permettant de modifier les tarifs et de débloquer des stationnements.",
+            technologies: ["Android Studio", "Kotlin", "SQLite"],
             images: [
-                "images/projet2/capture1.jpg",
-                "images/projet2/capture2.jpg",
-                "images/projet2/capture3.jpg",
-                "images/projet2/capture4.jpg"
+                "images/garaou/logo.svg"
             ]
-        },
+        }/*,
         3: {
             title: "Piou",
             description: "<Nom de l’application> est une application mobile développée en Kotlin sous Android Studio, conçue pour fonctionner comme une borne de stationnement numérique. Elle permet à l’utilisateur d’enregistrer sa plaque d’immatriculation afin de générer automatiquement un QR code personnel utilisé pour identifier le véhicule. À la fin du stationnement, il suffit de scanner ce QR code pour afficher le montant à régler. Le paiement est simulé afin de reproduire le processus réel sans effectuer de transaction. L’application s’appuie sur une base de données locale SQLite pour gérer les informations de stationnement, les tarifs et les données utilisateur. Elle propose également la consultation des tarifs, un système multilingue incluant le français, l’anglais et l’espagnol, ainsi qu’un espace administrateur permettant de modifier les tarifs et de débloquer des stationnements.",
@@ -315,7 +312,7 @@ function setupProjectCarousel() {
                 "images/projet2/capture3.jpg",
                 "images/projet2/capture4.jpg"
             ]
-        }
+        }*/
     };
 
     const modal = document.getElementById('projetModal');
@@ -333,7 +330,7 @@ function setupProjectCarousel() {
 
     // Gestionnaire pour les boutons "Voir le projet"
     document.querySelectorAll('.btn-projet').forEach(btn => {
-        btn.addEventListener('click', function(e) {
+        btn.addEventListener('click', function (e) {
             e.preventDefault();
             const projetId = this.getAttribute('data-projet');
             openProjectModal(projetId);
@@ -360,7 +357,7 @@ function setupProjectCarousel() {
 
         // Créer le carrousel
         createCarousel(currentProject.images);
-        
+
         // Afficher le modal
         modal.style.display = 'block';
         document.body.style.overflow = 'hidden';
@@ -376,15 +373,15 @@ function setupProjectCarousel() {
         images.forEach((imageSrc, index) => {
             const slide = document.createElement('div');
             slide.className = 'carousel-slide';
-            
+
             const img = document.createElement('img');
             img.src = imageSrc;
             img.alt = `Capture ${index + 1}`;
-            img.onerror = function() {
+            img.onerror = function () {
                 // Image de placeholder si l'image n'existe pas
                 this.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIiBmaWxsPSIjOTk5Ij5DYXB0dXJlICcgKyAoaW5kZXggKyAxKSArICc8L3RleHQ+PC9zdmc+';
             };
-            
+
             slide.appendChild(img);
             carouselInner.appendChild(slide);
 
@@ -403,10 +400,10 @@ function setupProjectCarousel() {
     function goToSlide(slideIndex) {
         const slides = carouselInner.children;
         const indicators = carouselIndicators.children;
-        
+
         if (slideIndex >= slides.length) slideIndex = 0;
         if (slideIndex < 0) slideIndex = slides.length - 1;
-        
+
         currentSlide = slideIndex;
         updateCarousel();
     }
@@ -415,7 +412,7 @@ function setupProjectCarousel() {
     function updateCarousel() {
         const slideWidth = 100;
         carouselInner.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
-        
+
         // Mettre à jour les indicateurs
         document.querySelectorAll('.indicator').forEach((indicator, index) => {
             indicator.classList.toggle('active', index === currentSlide);
@@ -428,7 +425,7 @@ function setupProjectCarousel() {
 
     // Fermer le modal
     closeBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', function(e) {
+    modal.addEventListener('click', function (e) {
         if (e.target === modal) closeModal();
     });
 
@@ -438,7 +435,7 @@ function setupProjectCarousel() {
     }
 
     // Navigation au clavier
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         if (modal.style.display === 'block') {
             if (e.key === 'Escape') closeModal();
             if (e.key === 'ArrowLeft') goToSlide(currentSlide - 1);
