@@ -301,18 +301,18 @@ function setupProjectCarousel() {
             images: [
                 "images/garaou/logo.svg"
             ]
-        }/*,
+        },
         3: {
             title: "Piou",
             description: "<Nom de l’application> est une application mobile développée en Kotlin sous Android Studio, conçue pour fonctionner comme une borne de stationnement numérique. Elle permet à l’utilisateur d’enregistrer sa plaque d’immatriculation afin de générer automatiquement un QR code personnel utilisé pour identifier le véhicule. À la fin du stationnement, il suffit de scanner ce QR code pour afficher le montant à régler. Le paiement est simulé afin de reproduire le processus réel sans effectuer de transaction. L’application s’appuie sur une base de données locale SQLite pour gérer les informations de stationnement, les tarifs et les données utilisateur. Elle propose également la consultation des tarifs, un système multilingue incluant le français, l’anglais et l’espagnol, ainsi qu’un espace administrateur permettant de modifier les tarifs et de débloquer des stationnements.",
             technologies: ["ASP.NET Core", "C#", "MVC", "Entity Framework", "Bootstrap", "SQL Server"],
             images: [
-                "images/projet2/capture1.jpg",
-                "images/projet2/capture2.jpg",
-                "images/projet2/capture3.jpg",
-                "images/projet2/capture4.jpg"
+                "images/biblio/biblio.jpg",
+                "images/biblio/biblio1.png"/*,
+                "images/biblio/biblio3.png",
+                "images/biblio/biblio4.png"*/
             ]
-        }*/
+        }
     };
 
     const modal = document.getElementById('projetModal');
