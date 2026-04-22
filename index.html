@@ -31,6 +31,7 @@
             <li><a href="#competences">Compétences</a></li>
             <li><a href="#projets">Projets</a></li>
             <li><a href="#veille">Veille Techno</a></li>
+            <li><a href="#expose">Exposé</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -212,56 +213,141 @@
                         <a href="#" class="btn-projet" data-projet="2">Voir le projet</a>
                     </div>
                 </div>
-                <!--<div class="projet-card" data-aos="flip-right">
+                <div class="projet-card" data-aos="flip-right">
                     <div class="projet-img">
                         <img src="images/projet2.jpg" alt="Projet 3">
                     </div>
                     <div class="projet-info">
-                        <h3>Projet 2 - ASP.NET Core MVC</h3>
-                        <p>Application web utilisant le framework ASP.NET Core MVC avec base de données.</p>
+                        <h3>Projet Bibliothèque</h3>
+                        <p>Application bureau permettant de gérer les livres, les adhérents et les emprunts.</p>
                         <a href="#" class="btn-projet" data-projet="3">Voir le projet</a>
                     </div>
-                </div>-->
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Modal Carrousel pour les projets -->
-    <div id="projetModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 id="modalTitle">QUOIIII ???</h3>
-                <span class="close">&times;</span>
-            </div>
-            <div class="carousel-container">
-                <div class="carousel">
-                    <div class="carousel-inner" id="carouselInner">
-                        <!-- Les images seront ajoutées dynamiquement -->
+    <section id="veille" class="section-veille">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-right">Ma veille technologique</h2>
+            <div class="veille-content" data-aos="fade-up">
+                <div class="veille-intro">
+                    <h3>Comment j'ai fais ma veille technologique ?</h3>
+                </div>
+                <!-- Présent : 2024 - aujourd'hui -->
+                <div class="veille-section" data-aos="fade-up" data-aos-delay="200">
+                    <div class="veille-header">
+                        <div class="veille-icon present">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>
+                            Boîte à outils
+                        </h3>
                     </div>
-                    <button class="carousel-btn prev" id="prevBtn">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="carousel-btn next" id="nextBtn">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-                <div class="carousel-indicators" id="carouselIndicators">
-                    <!-- Les indicateurs seront ajoutés dynamiquement -->
-                </div>
-            </div>
-            <div class="modal-description">
-                <p id="modalDescription">Description du projet</p>
-                <div class="project-technologies" id="projectTechnologies">
-                    <!-- Les technologies seront ajoutées dynamiquement -->
+                    <div class="veille-details">
+                        <div class="applications-grid">
+                            <!-- Trello -->
+                            <div class="application-card">
+                                <i class="fab fa-trello"></i>
+                                <h4>Trello</h4>
+                                <p>
+                                    J’utilise Trello pour organiser ma veille technologique. Mon tableau est divisé en
+                                    trois colonnes :
+                                    <strong>"À lire"</strong> (articles à découvrir),
+                                    <strong>"Pertinents"</strong> (articles lus et intéressants pour ma veille),
+                                    et <strong>"Archivés"</strong> (articles non pertinents).
+                                    <br><br>
+                                    <img src="images/trello.png">
+                                </p>
+                            </div>
+
+                            <!-- Feedly -->
+                            <div class="application-card">
+                                <i class="fas fa-rss"></i>
+                                <h4>Feedly</h4>
+                                <p>
+                                    Feedly me permet de suivre en temps réel les sites spécialisés dans mon domaine.
+                                    J’ai abonné mon compte aux flux RSS de sources fiables comme
+                                    <strong>Humanoids Daily</strong>, <strong>IEEE Spectrum</strong> ou <strong>MIT
+                                        Technology Review</strong>.
+                                    Dès qu’un nouvel article est publié, je le découvre directement dans Feedly et
+                                    l’ajoute à Trello pour un classement ultérieur.
+                                    <br><br>
+                                    <img src="images/feedly.png">
+                                </p>
+                            </div>
+
+                            <!-- Google Scholar -->
+                            <div class="application-card">
+                                <i class="fab fa-google"></i>
+                                <h4>Google Scholar</h4>
+                                <p>
+                                    Google Scholar est mon outil de référence pour trouver des <strong>publications
+                                        académiques</strong>
+                                    et des <strong>études scientifiques</strong> sur les robots humanoïdes et l’IA.
+                                    Je l’utilise pour accéder à des articles validés par des pairs, des thèses ou des
+                                    conférences,
+                                    et compléter ainsi ma veille avec des sources fiables et approfondies. <br><br>
+                                    <img src="images/scholar.png">
+                                </p>
+                            </div>
+
+                            <!-- Google Alert -->
+                            <div class="application-card">
+                                <i class="fas fa-bell"></i>
+                                <h4>Google Alert</h4>
+                                <p>
+                                    Avec Google Alert, je reçois des <strong>notifications automatiques</strong> par
+                                    email dès qu’un nouveau contenu
+                                    est publié en ligne sur des mots-clés que j’ai prédéfinis (ex. : "robots humanoïdes
+                                    2026", "IA générative", "1X Technologies").
+                                    Cela me permet de ne rien manquer des dernières actualités sans avoir à effectuer
+                                    des recherches manuelles. <br><br>
+                                    <img src="images/google-alert.png">
+                                </p>
+                            </div>
+
+                            <!-- Newsletter -->
+                            <div class="application-card">
+                                <i class="fas fa-newspaper"></i>
+                                <h4>Newsletter</h4>
+                                <p>
+                                    Je suis abonné à plusieurs <strong>newsletters spécialisées</strong> (ex. : The
+                                    Robot Report, AI Weekly)
+                                    pour recevoir directement dans ma boîte mail des résumés des actualités importantes.
+                                    Ces newsletters me permettent de rester informé des tendances et innovations sur les
+                                    robots humanoïdes,
+                                    avec des analyses synthétiques et des liens vers des articles complets.
+                                </p>
+                            </div>
+
+                            <!-- Réseaux sociaux -->
+                            <div class="application-card">
+                                <i class="fas fa-users"></i>
+                                <h4>Réseaux sociaux</h4>
+                                <p>
+                                    Je suis actif sur des réseaux sociaux comme <strong>Instagram</strong> et
+                                    <strong>Facebook</strong>
+                                    pour suivre les publications et les annonces en temps réel.
+                                    Je suis des comptes d’experts, de startups (ex. : <strong>Boston Dynamics</strong>,
+                                    <strong>Futura Science</strong>, etc...)
+                                    et de médias spécialisés,
+                                    ce qui me permet de découvrir des informations exclusives ou des débats sur les
+                                    dernières avancées technologiques. <br><br>
+                                    <img src="images/instagram.png">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Section Veille Technologique -->
-    <section id="veille" class="section-veille">
+    <!-- Section Exposé -->
+    <section id="expose" class="section-veille">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-right">Veille Technologique</h2>
+            <h2 class="section-title" data-aos="fade-right">Les robots humanoïdes</h2>
             <div class="veille-content" data-aos="fade-up">
                 <div class="veille-intro">
                     <h3>L’essor des robots humanoïdes : innovations, enjeux et perspectives mondiales</h3>
@@ -626,17 +712,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- SOURCES -->
-                <div class="veille-conclusion" data-aos="fade-up" data-aos-delay="400">
-                    <h3>Sources</h3>
-                    <div class="impact-grid">
-                        <div class="impact-item">
-                            <a href="sources.html" class="btn-download-sources">Plus de sources</a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -652,19 +727,15 @@
                         <i class="fas fa-envelope"></i>
                         <p>daphneliret@gmail.com</p>
                     </div>
-                    <!--<div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <p>+33 6 09 17 36 43</p>
-                    </div>-->
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <p>La Réunion</p>
+                        <p>Saint-Louis - La Réunion</p>
                     </div>
-                    <!-- <div class="social-media">
-                        <a href="https://www.linkedin.com/in/Daphné-Liret-95111826a/" class="social-icon"><i
+                    <div class="social-media">
+                        <a href="https://www.linkedin.com/in/daphné-liret-327a14326" class="social-icon"><i
                                 class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/KhraxX" class="social-icon"><i class="fab fa-github"></i></a>
-                    </div> -->
+                        <a href="https://github.com/Daphne974" class="social-icon"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
                 <div class="contact-form" data-aos="fade-left">
                     <h3>Envoyez-moi un message</h3>
