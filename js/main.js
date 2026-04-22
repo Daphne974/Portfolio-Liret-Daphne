@@ -299,18 +299,19 @@ function setupProjectCarousel() {
             description: "Gar'aou !? est une application mobile développée en Kotlin sous Android Studio, conçue pour fonctionner comme une borne de stationnement numérique. Elle permet à l’utilisateur d’enregistrer sa plaque d’immatriculation afin de générer automatiquement un QR code personnel utilisé pour identifier le véhicule. À la fin du stationnement, il suffit de scanner ce QR code pour afficher le montant à régler. Le paiement est simulé afin de reproduire le processus réel sans effectuer de transaction. L’application s’appuie sur une base de données locale SQLite pour gérer les informations de stationnement, les tarifs et les données utilisateur. Elle propose également la consultation des tarifs, un système multilingue incluant le français, l’anglais et l’espagnol, ainsi qu’un espace administrateur permettant de modifier les tarifs et de débloquer des stationnements.",
             technologies: ["Android Studio", "Kotlin", "SQLite"],
             images: [
-                "images/garaou/logo.svg"
+                "images/garaou/garaou.png",
+                "images/garaou/garaou1.png"
             ]
         },
         3: {
-            title: "Piou",
-            description: "<Nom de l’application> est une application mobile développée en Kotlin sous Android Studio, conçue pour fonctionner comme une borne de stationnement numérique. Elle permet à l’utilisateur d’enregistrer sa plaque d’immatriculation afin de générer automatiquement un QR code personnel utilisé pour identifier le véhicule. À la fin du stationnement, il suffit de scanner ce QR code pour afficher le montant à régler. Le paiement est simulé afin de reproduire le processus réel sans effectuer de transaction. L’application s’appuie sur une base de données locale SQLite pour gérer les informations de stationnement, les tarifs et les données utilisateur. Elle propose également la consultation des tarifs, un système multilingue incluant le français, l’anglais et l’espagnol, ainsi qu’un espace administrateur permettant de modifier les tarifs et de débloquer des stationnements.",
-            technologies: ["ASP.NET Core", "C#", "MVC", "Entity Framework", "Bootstrap", "SQL Server"],
+            title: "Gestiblio",
+            description: "Application bureau développée en C# pour gérer une bibliothèque. Elle permet de consulter, ajouter, modifier et supprimer des livres dans une base de données. L'application propose également la gestion des emprunteurs et du suivi des emprunts. L'interface a été conçue avec Windows Forms pour offrir une navigation intuitive et une expérience utilisateur agréable.",
+            technologies: ["C#", "Windows Forms", "SQL Server"],
             images: [
                 "images/biblio/biblio.jpg",
-                "images/biblio/biblio1.png"/*,
-                "images/biblio/biblio3.png",
-                "images/biblio/biblio4.png"*/
+                "images/biblio/biblio1.png",
+                "images/biblio/biblio2.png",
+                "images/biblio/biblio3.png"
             ]
         }
     };
